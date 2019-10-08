@@ -56,10 +56,12 @@ function App() {
     <div className="App">
       <h1>HELLO</h1>
       <AddToDoForm dispatch={dispatch}/> 
-      <ToDoList 
-        list={toDoList} 
-        buttonFunctions={buttonFunctions}
-      /> 
+      {toDoList.length !== 0 &&
+        <ToDoList 
+          list={toDoList} 
+          buttonFunctions={buttonFunctions}
+        /> 
+      }
 
       {completedArray.length !== 0 &&
         <CompletedToDoList 

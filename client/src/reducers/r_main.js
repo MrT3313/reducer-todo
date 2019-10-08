@@ -7,7 +7,7 @@ import React from 'react'
 const initialState = {
     ToDos: [
         { item: 'Paint the sink', completed: false,  id: Date.now() },
-        { item: 'Start at door. What does Rover see in this??', completed: false,  id: Date.now() },
+        { item: 'Stare at door. What does Rover see in this??', completed: false,  id: Date.now() },
         { item: 'Third To Do', completed: false,  id: Date.now() },
         { item: 'Get cat from dog store', completed: false,  id: Date.now() },
         { item: 'Return VHS to the 90s', completed: false,  id: Date.now() },

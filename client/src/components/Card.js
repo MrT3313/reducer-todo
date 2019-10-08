@@ -67,7 +67,9 @@ function Card(params) {
                 {ToDo.item}
             </TitleContainer>
             <ButtonContainer>
-                <ExtendedButton className={'green'} text={'Complete ToDo'} buttonFunction={handleComplete}/>
+                {ToDo.completed === false &&
+                    <ExtendedButton className={'green'} text={'Complete ToDo'} buttonFunction={handleComplete}/>
+                }
                 <ExtendedButton className={'yellow'} text={'Update ToDo'} buttonFunction={handleUpdate}/>
                 <ExtendedButton className={'red'} text={'Delete ToDo'} buttonFunction={handleDelete}/>
             </ButtonContainer>

@@ -3,10 +3,18 @@ import styled from 'styled-components'
 
 import Card from '../components/Card.js'
 // -- * -- //
-const ToDoList_container = styled.div`
+const Wrapper = styled.div`
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+`;
+const CardsContainer = styled.div`
+    display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 
+    width: 90%;
     margin: 10px;
     padding: 10px;
 
@@ -27,18 +35,18 @@ function ToDoList({list, buttonFunctions}) {
     })
     // -- * -- //
     return(
-        <>
+        <Wrapper className='activeListWrapper'>
             <div>
                 Active ToDo's
             </div>
-            <ToDoList_container>
+            <CardsContainer className='activeCardsWrapper'>
                 {list.map((ToDo,index) => {
                     console.log(ToDo, index)
                     // -- * -- //
                     return <Card ToDo={ToDo} id={index} key={index} buttonFunctions={buttonFunctions}/> 
                 })}
-            </ToDoList_container>
-        </>
+            </CardsContainer>
+        </Wrapper>
     )
 }
 
