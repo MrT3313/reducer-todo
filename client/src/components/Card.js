@@ -47,17 +47,17 @@ function Card(params) {
     const handleComplete = e => {
         e.preventDefault()
         console.log(id)
-        buttonFunctions.completeToDo()
+        buttonFunctions.completeToDo(id)
     }
     const handleUpdate = e => {
         e.preventDefault()
         console.log(id)
-        buttonFunctions.updateToDo()
+        buttonFunctions.updateToDo(id)
     }
     const handleDelete = e => {
         e.preventDefault()
         console.log(id)
-        buttonFunctions.deleteToDo()
+        buttonFunctions.deleteToDo(id)
     }
 
     // -- * -- //

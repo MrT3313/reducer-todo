@@ -13,14 +13,26 @@ function App() {
     console.log(toDoList)
   })
   // -- * -- //
-  const updateToDo = () => {
+  const updateToDo = (id) => {
     console.log('UPDATE TO DO')
+    console.log(id)
+
+    console.log(toDoList)
+    
   }
-  const completeToDo = () => {
+  const completeToDo = (id) => {
     console.log('COMPLETE TO DO')
+    console.log(id)
+    // -- * -- //
+    console.log(toDoList)
+    toDoList.splice(id,1)
+    console.log(toDoList)
+    // -- * -- //
+    dispatch({ type: 'COMPLETE_TODO', payload: toDoList})
   }
-  const deleteToDo = () => {
+  const deleteToDo = (id) => {
     console.log('DELETE TO DO')
+    console.log(id)
   }
   const buttonFunctions = {
     updateToDo,

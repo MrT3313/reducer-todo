@@ -20,6 +20,8 @@ function r_main(state, action) {
     // console.log(state)
     // console.log(action)
     // -- * -- //
+    let arrayToReturn = []
+    // -- * -- //
     switch(action.type) {
         case 'ADD_TODO':
             const newToDo = {
@@ -30,9 +32,15 @@ function r_main(state, action) {
             console.log(newToDo)
             console.log(state)
             // -- * -- //
-                const arrayToReturn = [...state, newToDo]
+                arrayToReturn = [...state, newToDo]
                     console.log(arrayToReturn)
                 return arrayToReturn
+        case 'COMPLETE_TODO':
+            console.log(action.payload)
+            // -- * -- // 
+            arrayToReturn = action.payload
+                console.log(arrayToReturn)
+            return [...arrayToReturn]
         default:
             return state
     }
