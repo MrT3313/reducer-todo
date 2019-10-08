@@ -13,11 +13,29 @@ function App() {
     console.log(toDoList)
   })
   // -- * -- //
+  const updateToDo = () => {
+    console.log('UPDATE TO DO')
+  }
+  const completeToDo = () => {
+    console.log('COMPLETE TO DO')
+  }
+  const deleteToDo = () => {
+    console.log('DELETE TO DO')
+  }
+  const buttonFunctions = {
+    updateToDo,
+    completeToDo,
+    deleteToDo,
+  }
+  // -- * -- //
   return (
     <div className="App">
       <h1>HELLO</h1>
       <AddToDoForm dispatch={dispatch}/> 
-      <ToDoList list={toDoList}/> 
+      <ToDoList 
+        list={toDoList} 
+        buttonFunctions={buttonFunctions}
+      /> 
     </div>
   );
 }

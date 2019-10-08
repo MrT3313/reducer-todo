@@ -29,6 +29,7 @@ function AddToDoForm({dispatch}) {
         } else {
             dispatch({ type: 'ADD_TODO', payload: ToDo })
         }
+        setTodo('')
     }
     // -- * -- //
     useEffect(() => {

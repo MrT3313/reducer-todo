@@ -40,9 +40,26 @@ const ButtonContainer = styled.div`
 
 // -- COMPONENT TO EXPORT - //
 function Card(params) {
-    console.log(params)
-    const { ToDo } = params
+    const { ToDo, id, buttonFunctions } = params
         console.log(ToDo)
+    // -- * -- //
+
+    const handleComplete = e => {
+        e.preventDefault()
+        console.log(id)
+        buttonFunctions.completeToDo()
+    }
+    const handleUpdate = e => {
+        e.preventDefault()
+        console.log(id)
+        buttonFunctions.updateToDo()
+    }
+    const handleDelete = e => {
+        e.preventDefault()
+        console.log(id)
+        buttonFunctions.deleteToDo()
+    }
+
     // -- * -- //
     return (
         <CardContainer>
@@ -50,9 +67,9 @@ function Card(params) {
                 {ToDo.item}
             </TitleContainer>
             <ButtonContainer>
-                <ExtendedButton className={'green'} text={'Complete ToDo'}/>
-                <ExtendedButton className={'yellow'} text={'Update ToDo'}/>
-                <ExtendedButton className={'red'} text={'Delete ToDo'}/>
+                <ExtendedButton className={'green'} text={'Complete ToDo'} buttonFunction={handleComplete}/>
+                <ExtendedButton className={'yellow'} text={'Update ToDo'} buttonFunction={handleUpdate}/>
+                <ExtendedButton className={'red'} text={'Delete ToDo'} buttonFunction={handleUpdate}/>
             </ButtonContainer>
         </CardContainer>
     )

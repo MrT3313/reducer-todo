@@ -29,30 +29,10 @@ function r_main(state, action) {
             }
             console.log(newToDo)
             console.log(state)
-            // -- V3 -- //
+            // -- * -- //
                 const arrayToReturn = [...state, newToDo]
                     console.log(arrayToReturn)
                 return arrayToReturn
-            // -- V2 -- //
-                // const objectToReturn = {
-                //     ...state, ToDos: [...state, newToDo]
-                // }
-                //     console.log(objectToReturn)
-                // return objectToReturn
-            // -- V1 -- //
-                // return {
-                //     ...state,
-                //     ToDos: [...state, newToDo]
-                // }
-        // case 'COMPLETE_TASK':
-        //     return { ...state, completed: action.payload}
-        // // case 'DECREASE':
-        // //     return { count: state.count - 1}
-        // case 'UPDATE_TASK':
-        //     return {...state, item: action.payload}
-        // case 'CLEAR_ALL_TASKS':
-        //     let newState = []
-        //     return newState 
         default:
             return state
     }

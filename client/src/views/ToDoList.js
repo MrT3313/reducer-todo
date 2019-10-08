@@ -18,8 +18,9 @@ const ToDoList_container = styled.div`
 `;
 
 // -- * -- //
-function ToDoList({list}) {
+function ToDoList({list, buttonFunctions}) {
     console.log(list)
+    console.log(buttonFunctions)
     // -- * -- //
     useEffect(() => {
         console.log('useEffect triggered')
@@ -30,7 +31,7 @@ function ToDoList({list}) {
             {list.map((ToDo,index) => {
                 console.log(ToDo, index)
                 // -- * -- //
-                return <Card ToDo={ToDo} key={index}/> 
+                return <Card ToDo={ToDo} id={index} key={index} buttonFunctions={buttonFunctions}/> 
             })}
         </ToDoList_container>
     )

@@ -7,10 +7,13 @@ const StyledButton = styled.button`
     border: 1px dashed black;
 `;
 // -- COMPONENT TO EXPORT -- //
-function Button({className, text}) {
+function Button({className, text, buttonFunction}) {
     // -- * -- //
     return (
-        <StyledButton className ={className}>
+        <StyledButton 
+            className ={className}
+            onClick={buttonFunction}
+        >
             {text}
         </StyledButton>
     )
