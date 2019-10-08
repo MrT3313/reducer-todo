@@ -6,8 +6,8 @@ import React from 'react'
 // - INITIAL STATE - //
 const initialState = {
     ToDos: [
-        { item: 'NAME OF THIS', completed: false,  id: Date.now() },
-        { item: 'Second Item', completed: false,  id: Date.now() },
+        { item: 'Paint the sink', completed: false,  id: Date.now() },
+        { item: 'Start at door. What does Rover see in this??', completed: false,  id: Date.now() },
         { item: 'Third To Do', completed: false,  id: Date.now() },
         { item: 'Get cat from dog store', completed: false,  id: Date.now() },
         { item: 'Return VHS to the 90s', completed: false,  id: Date.now() },
@@ -15,7 +15,7 @@ const initialState = {
     ],
 }
 
-// - COMPONENT TO EXPORT - //
+// -- REDUCER -- //
 function r_main(state, action) {
     // console.log(state)
     // console.log(action)
@@ -35,7 +35,13 @@ function r_main(state, action) {
                 arrayToReturn = [...state, newToDo]
                     console.log(arrayToReturn)
                 return arrayToReturn
-        case 'COMPLETE_TODO':
+        // case 'COMPLETE_TODO':
+        //     console.log(action.payload)
+        //     // -- * -- // 
+        //     arrayToReturn = action.payload
+        //         console.log(arrayToReturn)
+        //     return [...arrayToReturn]
+        case 'DELETE_TODO':
             console.log(action.payload)
             // -- * -- // 
             arrayToReturn = action.payload

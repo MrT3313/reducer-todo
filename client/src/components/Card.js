@@ -69,7 +69,7 @@ function Card(params) {
             <ButtonContainer>
                 <ExtendedButton className={'green'} text={'Complete ToDo'} buttonFunction={handleComplete}/>
                 <ExtendedButton className={'yellow'} text={'Update ToDo'} buttonFunction={handleUpdate}/>
-                <ExtendedButton className={'red'} text={'Delete ToDo'} buttonFunction={handleUpdate}/>
+                <ExtendedButton className={'red'} text={'Delete ToDo'} buttonFunction={handleDelete}/>
             </ButtonContainer>
         </CardContainer>
     )
